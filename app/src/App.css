@@ -81,3 +81,111 @@ body{
   position: relative;
   z-index: 4;
 }
+.price-container{
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  position:relative;
+  color: #fff;
+  margin-top:100px;
+}
+.price-container > .left{
+  width: 400px;
+}
+.price-container > .left > p{
+  margin-top: 40px;
+  font-size: 18px;
+}
+.price-container > .right {
+  width: 600px;
+  height: 600px;
+}
+.price-container > .right > img{
+  width: 600px;
+  height: 600px;
+  display: block;
+  margin:auto;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.product-container{
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+}
+.product-container > .left{
+  width: 600px;
+  margin-right: 50px;
+}
+.product-container > .left > img{
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.product-container > .right{
+  width: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+.product-container > .right > p{
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.logInButton{
+  display: block;
+  width: 170px ;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  background-color: #00c46a;
+  border-radius: 10px;
+  color:#242a2e;
+  font-weight: bolder;
+  font-size: 18px;
+  text-decoration: none;
+}
+.login-card{
+  width: 400px;
+  height: 300px;
+  background: #d2d7da;
+  margin:  auto;
+  border-radius: 20px;
+  margin-top: 100px;
+
+  
+}
+.login-card > form{
+  display: flex !important;
+  flex-direction: column;
+  width: 200px;
+  display: block;
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.login-card > form > label{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  word-spacing: 6px;
+  letter-spacing: 2px;
+}
+.login-card > form > input{
+  height: 30px;
+}
+.login-btn{
+  width: 140px;
+  height: 25px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  background-color: #84f0bd;
+  cursor: pointer;
+}

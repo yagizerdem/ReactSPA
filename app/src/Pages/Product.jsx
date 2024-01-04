@@ -1,10 +1,14 @@
-import pricingimg from '../assets/img-2.jpg'
+import productimg from '../assets/img-1.jpg'
 
-export default function Pricing(){
+export default function Product(){
 
     return(
-        <div className="price-container">
+        <div className="product-container">
             <div className="left">
+                <img src={productimg} alt="price image"></img>
+
+            </div>
+            <div className="right">
             <h1>Simple pricing.
                 <br />
                 Just $9/month.
@@ -12,9 +16,6 @@ export default function Pricing(){
             <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel labore mollitia iusto. Recusandae quos provident, laboriosam fugit voluptatem iste.
             </p>
-            </div>
-            <div className="right">
-                <img src={pricingimg} alt="price image"></img>
             </div>
         </div>
     )

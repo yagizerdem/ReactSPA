@@ -11,8 +11,12 @@ export default function NavBar(){
                 <li>
                 <Link to="/pricing" className="link-item">PRICING</Link>
                 </li>
-                <li>PRODUCT</li>
-                <li><button>LogIn</button></li>
+                <li>
+                <Link to="/product" className="link-item">PRODUCT</Link>
+                </li>
+                <li>
+                <Link to="/login" className="logInButton">LogIn</Link>
+                </li>
             </ul>
         </nav>
     )
