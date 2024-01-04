@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin:0px;
+  font-family: 'Open Sans', sans-serif;
+}
+body{
+  overflow: hidden;
+}
+.container{
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+}
+.center{
+  height:100%;
+  position: relative;
+  overflow-y: scroll ;
+  overflow-x: hidden;
+}
+.shadow{
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  background: linear-gradient(to right, rgb(92, 97, 89), rgb(51, 139, 147));
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
+}
+.app-layout-navbar{
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+}
+.app-layout-navbar > ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  list-style-type:none;
+}
+.app-layout-navbar > ul > li:first-child{
+  flex-basis: 66.33%; 
+}
+.link-item{
+  color:#fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.title{
+  font-size: 50px;
+  color:#eee8e8;
+  text-align: center;
+  margin-top: 20px;
+}
+.sub-title{
+  color:#bdc3c3;
+  margin-top: 60px;
+  text-align: center; 
+}
+.traking-btn{
+  display: inline-block;
+  background-color: #00c46a;
+  color: var(--color-dark--1);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: block;
+  margin: 30px auto;
+}
+.container_{
+  color: #fff !important;
+  position: relative;
+}
+.card{
+  position: relative;
+  z-index: 4;
+}
