@@ -210,11 +210,81 @@ body{
 .app-right{
   width: calc(100% - 500px);
   height: 100%;
-  background: green;
 }
 .map{
   top: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
+}
+.app-navbar{
+  width: 200px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-navbar > ul{
+  background: rgb(64, 67, 64);
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+}
+.app-navbar > ul > li{
+  padding: 10px;
+
+}
+.app-navlink{
+  color:#fff;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+}
+.active-app-navlink{
+  background: rgb(216, 152, 152);
+}
+.logout-bar{
+  width: 250px;
+  height: 60px;
+  background: rgb(85, 80, 80);
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: 999;
+  margin:50px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logout-bar >img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.logout-bar > .username{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.logout-bar > button{
+  padding: 5px 8px;
+  background: linear-gradient(#313030, #646467);
+  color:#fff;
+  font-weight: bolder;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 950px) {
+  .logout-bar{
+    display: none;
+  }
 }

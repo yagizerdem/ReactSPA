@@ -23,6 +23,9 @@ function AuthProvider({children}){
             value={{
                 isLoggedIn,
                 checkLogIn,
+                userName : FAKE_USER.username,
+                avatar : FAKE_USER.avatar,
+                setIsLoggedIn
             }}
         >
             {children}

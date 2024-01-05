@@ -1,8 +1,10 @@
 import { Outlet, useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../Context/AuthContext";
 
 
 export default function Home(){
+    const {isLoggedIn} = useAuthContext()
     return(
         <>
 
@@ -18,7 +20,7 @@ export default function Home(){
              Never forget your wonderful experiences, and show your friends how you have wandered the world.
             </h2>
 
-            <button className="traking-btn"><Link to="/app">START TRACKING NOW</Link></button>
+            <button className="traking-btn"><Link to ={isLoggedIn ? "/app" :  "/login" } >START TRACKING NOW</Link></button>
         </div>
         </>
 

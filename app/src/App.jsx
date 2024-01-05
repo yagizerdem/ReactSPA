@@ -15,6 +15,8 @@ import Product from "./Pages/Product";
 import LogIn from "./Pages/LogIn";
 import { AuthProvider } from "./Context/AuthContext";
 import AppLayout from "./Pages/AppLayout.jsx";
+import City from "./Pages/City.jsx";
+import Countries from "./Pages/Countries.jsx";
 
 function App() {
   return (
@@ -28,7 +30,10 @@ function App() {
                 <Route path="/product" element={<Product/>}></Route>
                 <Route path="login" element={<LogIn/>}></Route>
               </Route>
-              <Route path="/app" element={<AppLayout/>}></Route>
+              <Route path="/app" element={<AppLayout/>}>
+                <Route path="cities"  element={<City/>}></Route>
+                <Route path="countries" element={<Countries/>}></Route>
+              </Route>
             </Routes>
         </BrowserRouter>
         </AuthProvider>
