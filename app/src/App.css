@@ -189,3 +189,32 @@ body{
   background-color: #84f0bd;
   cursor: pointer;
 }
+
+.app-container{
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+.app-center{
+  height: calc(100vh - 40px);
+  width: calc(100% - 40px);
+  margin: auto;
+  background:black;
+  display: flex;
+}
+.app-left{
+  width: 500px;
+  height: 100%;
+  background: #2d3439;
+}
+.app-right{
+  width: calc(100% - 500px);
+  height: 100%;
+  background: green;
+}
+.map{
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}

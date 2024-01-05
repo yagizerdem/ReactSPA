@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router";
-
+import { Link } from "react-router-dom";
 
 
 export default function Home(){
@@ -17,7 +17,8 @@ export default function Home(){
                 <br/>
              Never forget your wonderful experiences, and show your friends how you have wandered the world.
             </h2>
-            <button className="traking-btn">START TRACKING NOW</button>
+
+            <button className="traking-btn"><Link to="/app">START TRACKING NOW</Link></button>
         </div>
         </>
 
