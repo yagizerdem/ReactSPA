@@ -17,7 +17,7 @@ export default function LogIn(){
             navigate(result.redirectUrl)
         }
         else{
-            navigate(result.redirectUrl)
+            navigate(result.redirectUrl )
             notify("please enter valid data")
         }
     }

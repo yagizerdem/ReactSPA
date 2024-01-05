@@ -1,24 +1,28 @@
-import NavBar from "../Components/NavBar"
-import bg from "../assets/bg.jpg"
-import { Outlet } from "react-router"
+import { useNavigate } from "react-router";
+import { useAuthContext } from "../Context/AuthContext";
+import { useEffect } from "react";
 
 export default function AppLayout(){
+    const navigate = useNavigate();
+    const {isLoggedIn} = useAuthContext()
+    console.log(isLoggedIn)
+    if(!isLoggedIn){
+        useEffect(()=>{
+            navigate("/" , {
+                state: {
+                    payroll: {
+                      errorcode: '404',
+                      errormessage: 'unauthorized access'
+                    }
+                  }
+            })
+        },[navigate])
+
+    } 
 
     return(
-        <div className="container">
-                                  <div className="shadow"></div>
-        <div className="center" style={{
-          background:`url(${bg})`,
-          backgroundSize:"cover",
-          backgroundPosition:"center"
-        }}>
-            <div className="card">
-            <NavBar></NavBar>
-            <Outlet/>
-            </div>
-
-
+        <div>
+            app layout
         </div>
-      </div>
     )
 }

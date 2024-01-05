@@ -13,7 +13,7 @@ function AuthProvider({children}){
     function checkLogIn(userName , password){
         if(FAKE_USER.username == userName && FAKE_USER.password == password){
             setIsLoggedIn(true)
-            return {success:true , redirectUrl:"/"}
+            return {success:true , redirectUrl:"/app"}
         }
         return {success:false , redirectUrl:"/login"}
     }
@@ -21,7 +21,8 @@ function AuthProvider({children}){
     return(
         <AuthContext.Provider
             value={{
-                checkLogIn:checkLogIn
+                isLoggedIn,
+                checkLogIn,
             }}
         >
             {children}

@@ -1,9 +1,11 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
+
 
 
 export default function Home(){
-
     return(
+        <>
+
         <div className="container_">
             <h1 className="title">
                 You travel the world.
@@ -17,6 +19,8 @@ export default function Home(){
             </h2>
             <button className="traking-btn">START TRACKING NOW</button>
         </div>
+        </>
+
 
     )
 }
