@@ -7,20 +7,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './App.css'
-import ContextProvider from "./Context/ContextProvider";
 import HomeLayout from "./Pages/HomeLayout.jsx";
 import Pricing from "./Pages/Pricing";
 import Home from "./Pages/Home";
 import Product from "./Pages/Product";
 import LogIn from "./Pages/LogIn";
-import { AuthProvider } from "./Context/AuthContext";
 import AppLayout from "./Pages/AppLayout.jsx";
 import City from "./Pages/City.jsx";
 import Countries from "./Pages/Countries.jsx";
+import { MapProvider } from "./Context/MapContext.jsx";
+import {AuthProvider} from "./Context/AuthContext.jsx"
 
 function App() {
   return (
-    <ContextProvider>
+    <MapProvider>
       <AuthProvider>
         <BrowserRouter>
             <Routes>
@@ -37,7 +37,7 @@ function App() {
             </Routes>
         </BrowserRouter>
         </AuthProvider>
-    </ContextProvider>
+    </MapProvider>
   )
 }
 
