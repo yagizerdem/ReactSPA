@@ -4,6 +4,7 @@ import { useEffect , useCallback } from "react";
 import Map from "../Components/Map";
 import AppNavBar from "../Components/AppNavBar";
 import LogOut from "../Components/LogOut";
+import ShowCity from "../Components/ShowCity";
 
 export default function AppLayout(){
     const navigate = useNavigate();
@@ -29,11 +30,10 @@ export default function AppLayout(){
                 <div className="app-left">
                 <AppNavBar></AppNavBar>
                 <Outlet></Outlet>
-                
+                <br/><hr/><br/>
+                <ShowCity></ShowCity>
                 </div>
                 <div className="app-right">
-              
-
                   {<Map/>}
                 </div>
             </div>

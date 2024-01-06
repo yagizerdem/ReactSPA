@@ -22,7 +22,8 @@ const RecenterAutomatically = ({lat,lng}) => {
 export default function Map(){
   const [center, setCenter] = useState([39.925533, 32.866287]);
   const {isLoading,error,locationData,getLocation} = useReverseGeoLocationApi();
-  // console.log(locationData)
+  const {handleClickedLocation} = useMapContext()
+  handleClickedLocation(locationData)
   function adjustCenter(lat, lng) {
     setCenter([lat, lng]);
     // get country city info wiht reverse geo location api

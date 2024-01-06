@@ -15,7 +15,7 @@ export default function useReverseGeoLocationApi() {
         const data = await result.json();
         setLocationData(data);
         setIsLoading(false);
-      } catch (ex) {
+      } catch(ex) {
         console.error(ex);
         setIsLoading(false);
         setError(ex);

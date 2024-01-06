@@ -3,10 +3,14 @@ import { useState , useContext } from "react"
 
 const Context = createContext()
 export default function MapProvider({children}){
-
-
+    const [clickedLocation , setClickedLocation] = useState()
+    function handleClickedLocation(location){
+        setClickedLocation(location)
+    }
     return(
         <Context.Provider value={{
+            clickedLocation,
+            handleClickedLocation
         }}>
             {children}
         </Context.Provider>

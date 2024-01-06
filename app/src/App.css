@@ -283,6 +283,24 @@ body{
   border-radius: 5px;
   cursor: pointer;
 }
+.show-city-container{
+  margin:auto;
+  text-align: center;
+}
+.no-city-selected{
+  font-size: 30px;
+  font-weight: bolder;
+  color:#fff;
+  margin: 20px;
+}
+.city-information{
+  color:#fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.show-city-row{
+  margin:10px;
+}
 @media only screen and (max-width: 950px) {
   .logout-bar{
     display: none;
