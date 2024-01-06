@@ -20,9 +20,8 @@ const RecenterAutomatically = ({lat,lng}) => {
  }
 
 export default function Map(){
-  const [center, setCenter] = useState([39.925533, 32.866287]);
   const {isLoading,error,locationData,getLocation} = useReverseGeoLocationApi();
-  const {handleClickedLocation} = useMapContext()
+  const {handleClickedLocation , markedAreas , center} = useMapContext()
   handleClickedLocation(locationData)
   function adjustCenter(lat, lng) {
     setCenter([lat, lng]);
@@ -36,11 +35,14 @@ export default function Map(){
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[1.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br/> Easily customizable.
-          </Popup>
-        </Marker>
+        {markedAreas.map((record)=>(
+        <Marker position={[record.lat, record.lon]} key={record.lat + record.lon}>
+        <Popup>
+         {record.description}
+        </Popup>
+      </Marker>
+        ))}
+
         <LocationFinder adjustCenter={adjustCenter} />
         <RecenterAutomatically lat={center[0]} lng={center[1]} />
       </MapContainer>

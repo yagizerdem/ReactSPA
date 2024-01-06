@@ -377,8 +377,34 @@ body{
 .fa-trash{
   color: #fff !important;
 }
+.country-container{
+  margin-top: 40px;
+}
+.country-container > ul{
+  width: fit-content;
+  color: #fff;
+  font-weight: bolder;
+  text-align: left;
+  margin: auto;
+}
+.use-your-location{
+  width: 350px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.319);
+  position: absolute;
+  z-index: 999;
+  bottom: 50px;
+  right: 50px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+}
 @media only screen and (max-width: 950px) {
   .logout-bar{
+    display: none;
+  }
+  .use-your-location{
     display: none;
   }
 }

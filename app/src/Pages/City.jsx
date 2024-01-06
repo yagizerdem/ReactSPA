@@ -26,7 +26,7 @@ export default function City(){
                     <button onClick={()=>{handleSubmitDescription(index , descriptionref.current.value)}}>Submit</button>
                 </div> :''}
                 <div>
-                    <button className="delete-record-btn" onClick={()=>{deleteRecord(index)}}><i class="fa-solid fa-trash"></i></button>
+                    <button className="delete-record-btn" onClick={()=>{deleteRecord(index)}}><i className="fa-solid fa-trash"></i></button>
                 </div>
                 <hr/>
             </li>    

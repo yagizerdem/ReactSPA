@@ -7,7 +7,7 @@ const Context = createContext()
 export default function MapProvider({children}){
     const [clickedLocation , setClickedLocation] = useState()
     const [markedAreas , setMarkedAreas] = useState([])
-
+    const [center , setCenter] = useState([39.925533, 32.866287])
     function handleClickedLocation(location){
         setClickedLocation(location)
     }
@@ -17,6 +17,9 @@ export default function MapProvider({children}){
             return [...prev ,  data]
         })
     }
+    function changeCenter(locationarray){
+        setCenter(locationarray)
+    }
     // get initial records from local storage
     useEffect(()=>{
         const records = JSON.parse(localStorage.getItem("world-wise"))
@@ -25,6 +28,11 @@ export default function MapProvider({children}){
     
     function addDescription(index , textdata){
         markedAreas[index].description = textdata
+        setMarkedAreas((prev) =>{
+            const arr = [...prev]
+            arr[index].description = textdata
+            return arr
+        })
         const jsondata = JSON.stringify(markedAreas)
         localStorage.setItem("world-wise" , jsondata)
     }
@@ -42,7 +50,9 @@ export default function MapProvider({children}){
             storeMarkedAreas,
             markedAreas,
             addDescription,
-            deleteRecord
+            deleteRecord,
+            center,
+            changeCenter
         }}>
             {children}
         </Context.Provider>
