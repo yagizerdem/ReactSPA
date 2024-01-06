@@ -301,6 +301,42 @@ body{
 .show-city-row{
   margin:10px;
 }
+.mark-button{
+  width: 200px;
+  height: 40px;
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.city-records{
+  width: fit-content;
+  background-color: #575555;
+  margin:auto;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.city-records > ul{
+  list-style-type: none;
+}
+.city-records > ul > li{
+  margin:10px 5px;
+}
+.city-records > ul > li > span{
+  display: block;
+  margin: 5px;
+}
+.record-header{
+  font-size: 18px;
+  font-weight: bolder;
+}
+.record-item{
+  color: #fff;
+  margin-left: 5px;
+}
 @media only screen and (max-width: 950px) {
   .logout-bar{
     display: none;

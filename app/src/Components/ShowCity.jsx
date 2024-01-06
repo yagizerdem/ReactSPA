@@ -1,8 +1,9 @@
+import { useEffect, useRef } from "react"
 import { useMapContext } from "../Context/MapContext"
 
 
 export default function ShowCity(){
-    const {clickedLocation} = useMapContext()
+    const {clickedLocation , storeMarkedAreas} = useMapContext()
     const imgsrc = clickedLocation ? `https://flagsapi.com/${clickedLocation.countryCode}/shiny/64.png` : " "
     const body = clickedLocation != undefined ? 
     <div className="city-information">
@@ -20,13 +21,31 @@ export default function ShowCity(){
                 <span>{clickedLocation.localityInfo.informative[1].name}</span>
             </div>
             <div className="show-city-row">
-                <button onClick={markArea}>Mark as visited</button>
+                <button onClick={markArea} className="mark-button">Mark as visited</button>
             </div>
     </div>:
     <div className="no-city-selected">No city has selected</div>
 
     function markArea(){
-        console.log("mark")
+        // logging  to local storage
+        var datafromlocaldb = JSON.parse(localStorage.getItem("world-wise"));
+        if(datafromlocaldb == null) {
+            datafromlocaldb = []
+            console.log("girdi")
+        }
+        const data = {
+            countryname : clickedLocation.countryName,
+            cityname : clickedLocation.city,
+            timezone : clickedLocation.localityInfo.informative[1].name,
+            description : "",
+            lat : clickedLocation.latitude,
+            lon : clickedLocation.longitude
+        }
+        datafromlocaldb.push(data)
+        const json = JSON.stringify(datafromlocaldb)
+        localStorage.setItem('world-wise', json)
+
+        storeMarkedAreas(data)
     }
 
     return(
