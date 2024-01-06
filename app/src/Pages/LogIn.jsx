@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function LogIn(){
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const {checkLogIn} = useAuthContext()
     const userNameref = useRef()
     const passwordref = useRef()
@@ -17,7 +17,7 @@ export default function LogIn(){
             navigate(result.redirectUrl)
         }
         else{
-            navigate(result.redirectUrl )
+            navigate(result.redirectUrl)
             notify("please enter valid data")
         }
     }
